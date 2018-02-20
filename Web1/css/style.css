@@ -1,0 +1,36 @@
+@import "../../node_modules/font-awesome/css/font-awesome.min.css";
+
+h1 {
+    font-size: 2rem;
+    color: maroon;
+}
+
+header h1 {
+    font-size: 2rem;
+} /*Esoecificidad: 0 0 0 2*/
+
+
+header p { /* Aplicar solo a los parrafos que estan dentro de un header */
+    color: greenyellow;
+}
+
+#p1 {
+     color: lightsalmon;
+ }
+
+ p[lang="en"] {
+     color: firebrick;
+ }
+
+ /*
+ .verde {
+     color: green;
+ }
+
+ .grande {
+     font-size: 1.4rem;
+ }
+
+ p {
+     color: hotpink;
+ } */

@@ -19,6 +19,7 @@ for (let i = 0; i < aDatos.length; i++){
 }
 console.log(suma)
 
+// Funciones declarativas
 suma = 0
 aDatos = aDatos.map(item => item = ++item )
 aDatos = aDatos.filter(item => item > 21)

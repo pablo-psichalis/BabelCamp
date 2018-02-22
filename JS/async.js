@@ -14,6 +14,11 @@ console.log(x)
 
 // En ES6
 
-const x = new Promise( (resolve, reject) => {
-    setTimeout ( () => {resolve()} , 2000 )
-} )
+const consulta = function() {
+    return new Promise( (resolve, reject) => {
+        setTimeout ( () => {resolve("Todo OK")} , 2000 )
+    } )
+}
+
+let resultados = consulta()
+.then( (res) => {console.log(res)} )

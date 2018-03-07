@@ -1,8 +1,11 @@
 .container {
     border-top: 1px solid white;
+    border-top-width: 2px;
 }
 
 .container p {
+    font-family: inherit;
+    font-style: italic;
     margin: 0;
     text-align: center;
 }

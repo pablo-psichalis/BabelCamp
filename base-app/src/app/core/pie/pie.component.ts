@@ -15,7 +15,7 @@ export class PieComponent implements OnInit {
 
   ngOnInit() {
     this.autor = 'Abloablo';
-    this.lugar = 'La silla';
+    this.lugar = 'Babelcamp';
     this.fecha = 'Marzo 2018';
   }
 

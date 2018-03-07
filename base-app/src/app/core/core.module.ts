@@ -14,11 +14,13 @@ import { RouterModule } from '@angular/router';
   declarations: [
     PieComponent,
     LogoComponent,
+    CabezaComponent,
     MenuComponent
   ],
   exports: [
     PieComponent,
     LogoComponent,
+    CabezaComponent,
     MenuComponent
   ]
 })

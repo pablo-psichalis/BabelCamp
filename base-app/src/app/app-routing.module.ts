@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent},
   { path: 'catalogo', loadChildren: './catalogo/catalogo.module#CatalogoModule' },
+  { path: 'comunicaciones', loadChildren: './comunicaciones/comunicaciones.module#ComunicacionesModule' },
   { path: '', pathMatch: 'full', redirectTo: 'about' }
 ];
 

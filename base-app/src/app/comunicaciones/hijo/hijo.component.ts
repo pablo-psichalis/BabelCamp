@@ -8,7 +8,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class HijoComponent implements OnInit {
 
   @Input() nombreHijo: string;
-  @Output() respuesta: EventEmitter<any>;
+  @Output() respuesta: EventEmitter<string>;
+  miNombre: string;
 
   constructor() {
     // onInit() se ejecuta más tarde que el constructor
@@ -22,7 +23,7 @@ export class HijoComponent implements OnInit {
   }
 
   btnOdiar() {
-    this.respuesta.emit();
+    this.respuesta.emit(this.miNombre);
   }
 
 }

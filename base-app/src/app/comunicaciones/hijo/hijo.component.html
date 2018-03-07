@@ -4,16 +4,16 @@
   </div>
   <div class="card-body">
     <div class="form-group">
-      <!--      <label for="nombre">Introduzca el nombre</label>
-      <input type="text" name="nombre" id="nombre" class="form-control" aria-describedby="helpId" [(ngModel)]="sNombre">
-      <small id="helpId" class="text-muted">Se actualizará automáticamente</small>
-    </div> 
--->
-      <button type="button" name="" id="" class="btn btn-primary" 
-      (click)="btnOdiar()">No me gusta {{ nombreHijo }}</button>
+      <label for="nombre">Nombre que quiero</label>
+      <input type="text" name="nombre" id="nombre" class="form-control" 
+      aria-describedby="helpId" [(ngModel)]="miNombre">
+    </div>
 
-    </div>
-    <div class="card-footer text-muted">
-      Me llamo {{ nombreHijo }}
-    </div>
+    <button type="button" name="" id="" class="btn btn-primary" 
+    (click)="btnOdiar()">No me gusta {{ nombreHijo }}, quiero {{ miNombre }}</button>
+
   </div>
+  <div class="card-footer text-muted">
+    Me llamo {{ nombreHijo }}
+  </div>
+</div>

@@ -14,8 +14,7 @@ export class PadreComponent implements OnInit {
     this.sNombre = 'Jesucristo';
   }
 
-  respuestaHijo() {
-    console.log('Respuesta del hijo');
-    this.sNombre = '';
+  respuestaHijo(oEv) {
+    this.sNombre = oEv;
   }
 }

@@ -11,7 +11,7 @@
     <button type="button" name="" id="" class="btn btn-primary" (click)="btnBorrar()">Borrar</button>
 -->
     </div>
-    <bbl-hijo [nombreHijo]="sNombre" (respuesta)="respuestaHijo()" ></bbl-hijo>
+    <bbl-hijo [nombreHijo]="sNombre" (respuesta)="respuestaHijo($event)" ></bbl-hijo>
     <div class="card-footer text-muted">
       <p>Mi hijo se llama {{ sNombre }}</p>
     </div>

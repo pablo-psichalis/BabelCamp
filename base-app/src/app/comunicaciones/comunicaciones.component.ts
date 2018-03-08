@@ -3,7 +3,11 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'bbl-comunicaciones',
   template: `
-    <bbl-padre class="col-6"></bbl-padre>
+    <div class="container">
+      <div class="row">
+        <bbl-padre class="col-6"></bbl-padre>
+      </div>
+    </div>
   `,
   styles: []
 })

@@ -36,7 +36,7 @@ export class FormTdComponent implements OnInit {
   }
 
   borrar() {
-
+    this.formulario.reset();
   }
 
 }

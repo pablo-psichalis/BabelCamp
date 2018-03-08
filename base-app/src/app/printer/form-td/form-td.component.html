@@ -1,4 +1,4 @@
-<form>
+<form #formPrinter = "ngForm" (submit)="enviar()">
   <!--Text-->
   <fieldset>
 
@@ -85,9 +85,11 @@
   </fieldset>
 
   <div class="form-group row">
-    <button type="submit" class="btn btn-primary mr-2">
+    <button type="submit" class="btn btn-primary mr-2"
+      [disabled]="formPrinter.invalid">
       Enviar</button>
-    <button type="button" class="btn btn-primary">
+    <button type="button" class="btn btn-primary"
+      (click)=borrar()>
       Borrar</button>
   </div>
 </form>

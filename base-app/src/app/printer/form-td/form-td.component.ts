@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Printer, DepartamentoIf } from '../modelos/master.model';
 import { Dptos, Printers } from '../modelos/master.data';
 import { OrdenPrintIf } from '../modelos/ordenprint.model';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'bbl-form-td',
@@ -12,6 +13,7 @@ export class FormTdComponent implements OnInit {
   aPrinters: Array<Printer>;
   aDptos: Array<DepartamentoIf>;
   ordenPrint: OrdenPrintIf;
+  @ViewChild('formPrinter') formulario: NgForm;
 
   constructor() { }
 
@@ -19,12 +21,22 @@ export class FormTdComponent implements OnInit {
     this.aPrinters = Printers;
     this.aDptos = Dptos;
     this.ordenPrint = {
-      user: {nombre: '', apellidos: '', telefono: ''},
-      impresora: {id: '', name: ''},
+      user: { nombre: '', apellidos: '', telefono: '' },
+      impresora: { id: '', name: '' },
       isColor: false,
       isClara: false,
-      dpto: {id: '', name: ''}
+      dpto: { id: '', name: '' }
     };
+
+    console.dir(this.formulario);
+  }
+
+  enviar() {
+    console.log('Datos enviados');
+  }
+
+  borrar() {
+
   }
 
 }

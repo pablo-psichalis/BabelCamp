@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'bbl-comunicaciones',
+  selector: 'bbl-agenda',
   template: `
     <div class="container">
       <div class="row">
-        <bbl-padre class="col-6"></bbl-padre>
+        <bbl-tareas class="col-6"></bbl-tareas>
       </div>
     </div>
   `,
   styles: []
 })
-export class ComunicacionesComponent implements OnInit {
+export class AgendaComponent implements OnInit {
 
   constructor() { }
 

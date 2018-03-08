@@ -3,9 +3,16 @@
     border-top-width: 2px;
 }
 
+div.row {
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+}
+
 .container p {
     font-family: inherit;
     font-style: italic;
     margin: 0;
     text-align: center;
+    font-family: inherit;
+    font-style: italic;
 }

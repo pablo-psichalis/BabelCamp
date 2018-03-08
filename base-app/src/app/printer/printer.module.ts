@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { PrinterRoutingModule } from './printer-routing.module';
 import { PrinterComponent } from './printer.component';
 import { FormTdComponent } from './form-td/form-td.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
-    PrinterRoutingModule
+    PrinterRoutingModule,
+    FormsModule
   ],
   exports: [
     PrinterComponent

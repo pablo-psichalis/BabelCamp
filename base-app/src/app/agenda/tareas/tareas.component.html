@@ -13,15 +13,19 @@
     <div *ngIf="aTareas.length; then ideasTemplate else vacioTemplate"></div>
 
     <ng-template #vacioTemplate>
-      <p>Anímate a añadir tu primera tarea!</p>
+      <p>Añade alguna tarea vago de mierda!</p>
     </ng-template>
 
     <ng-template #ideasTemplate>
       <h4>Lista de tareas</h4>
       <ul class="list-group">
-        <li class="list-group-item" *ngFor="let tarea of aTareas">{{tarea}}</li>
+        <li class="list-group-item" *ngFor="let tarea of aTareas; let i = index">#{{i+1}}: {{tarea}} 
+          <i class="fa fa-trash papelera"
+           (click)="deleteTarea(i)"
+          title="Eliminar"></i>
+        </li>
       </ul>
     </ng-template>
-    
+
   </div>
 </div>

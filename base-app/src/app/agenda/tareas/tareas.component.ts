@@ -24,4 +24,8 @@ export class TareasComponent implements OnInit {
     this.aTareas.push(this.sTarea);
   }
 
+  deleteTarea(i) {
+    this.aTareas.splice(i, 1);
+  }
+
 }

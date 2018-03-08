@@ -49,12 +49,10 @@
   </fieldset>
   <!--Select/options -->
   <fieldset class="form-group">
-    <legend>Departameto</legend>
+    <legend>Departamento</legend>
     <div class="form-group row">
       <select class="form-control" id="select" name="select">
-        <option>Ventas</option>
-        <option>Marketing</option>
-        <option>Sistemas</option>
+        <option *ngFor="let dpto of aDptos">{{dpto.name}}</option>
       </select>
     </div>
   </fieldset>

@@ -28,11 +28,8 @@
     <legend>Selecciona una Impresora</legend>
     <div class="form-check" *ngFor="let printer of aPrinters">
       <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="printer" [id]="printer.id" [value]="printer">
-        <option *ngFor="let printer of aPrinters" 
-          [value]="printer" {{printer.name}}>
-        </option>
-        {{printer.name}}
+        <input type="radio" class="form-check-input" name="printer" [id]="printer.id" [value]="printer"
+        [(ngModel)]="ordenPrint.impresora">{{printer.name}}
       </label>
     </div>
   </fieldset>
@@ -55,10 +52,8 @@
   <fieldset class="form-group">
     <legend>Departamento</legend>
     <div class="form-group row">
-      <select class="form-control" id="select" [(ngModel)]="ordenPrint.dpto" name="select">
-        <option *ngFor="let dpto of aDptos" 
-        [ngValue]="dpto" {{dpto.name}}>
-      </option>
+      <select class="form-control" id="select" name="select" [(ngModel)]="ordenPrint.dpto">
+        <option *ngFor="let dpto of aDptos" [ngValue]="dpto">{{dpto.name}}</option>
       </select>
     </div>
   </fieldset>

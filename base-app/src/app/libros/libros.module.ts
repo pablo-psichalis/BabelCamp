@@ -6,17 +6,21 @@ import { LibrosComponent } from './libros.component';
 import { BooksService } from '../servicios/books.service';
 import { LibrosMocComponent } from './libros-moc/libros-moc.component';
 import { FormsModule } from '@angular/forms';
+import { LibrosBuscarComponent } from './libros-buscar/libros-buscar.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
     LibrosRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   exports: [
-    LibrosComponent
+    LibrosComponent,
+    LibrosBuscarComponent
   ],
-  declarations: [LibrosComponent, LibrosMocComponent],
+  declarations: [LibrosComponent, LibrosMocComponent, LibrosBuscarComponent],
   providers: [BooksService]
 })
 export class LibrosModule { }

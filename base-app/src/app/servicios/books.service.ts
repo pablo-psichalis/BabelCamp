@@ -22,8 +22,12 @@ export class BooksService {
   getLibrosAsync(clave: string) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        resolve(this.aLibros);
-      }, 4000);
+        if (Math.random() > 0.5) {
+          resolve(this.aLibros);
+        } else {
+          reject('Esto es un error');
+        }
+      }, 1500);
     });
   }
 

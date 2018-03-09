@@ -41,6 +41,23 @@ export class LibrosBuscarComponent implements OnInit {
     this.clave = '';
   }
 
+
+  buscarRx() {
+    this.aLibros = [];
+    const url = this.urielBase + this.clave;
+    this.httpClient.get(url).subscribe(
+      (response: any) => {
+        console.log(response.items);
+        response.items.forEach(element => {
+          this.aLibros.push(element.volumeInfo.title);
+        });
+      }
+    );
+
+    this.clave = '';
+  }
+
+
   /*   buscarAsync() {
       this.booksService.getLibrosAsync(this.clave)
         .then((response: any) => this.aLibros = response);

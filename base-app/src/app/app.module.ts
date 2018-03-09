@@ -9,11 +9,13 @@ import { CoreModule } from './core/core.module';
 import { CabezaComponent } from './core/cabeza/cabeza.component';
 import { HomeModule } from './home/home.module';
 import { AboutModule } from './about/about.module';
+import { TruncarPipe } from './pipes/truncar.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    TruncarPipe,
   ],
   imports: [
     BrowserModule,

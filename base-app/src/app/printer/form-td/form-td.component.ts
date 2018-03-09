@@ -7,7 +7,8 @@ import { NgForm } from '@angular/forms';
 @Component({
   selector: 'bbl-form-td',
   templateUrl: './form-td.component.html',
-  styleUrls: ['./form-td.component.css']
+  styleUrls: ['./form-td.component.css'],
+  // providers
 })
 export class FormTdComponent implements OnInit {
   aPrinters: Array<Printer>;

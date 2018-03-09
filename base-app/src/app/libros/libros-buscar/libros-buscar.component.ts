@@ -21,10 +21,19 @@ export class LibrosBuscarComponent implements OnInit {
   }
 
   buscar() {
+    this.aLibros = [];
     const url = this.urielBase + this.clave;
     this.httpClient.get(url).toPromise()
       .then(
-        (response: any) => console.log(response)
+        // Es "response.items" o "element.volumeInfo.title"
+        // porque está sacado del JSON que retorna la API
+        // https://www.googleapis.com/books/v1/volumes?q=intitle:"clave"
+        (response: any) => {
+          console.log(response.items);
+          response.items.forEach(element => {
+            this.aLibros.push(element.volumeInfo.title);
+          });
+        }
       )
       .catch((error) => console.log(error));
 

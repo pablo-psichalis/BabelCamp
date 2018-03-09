@@ -37,7 +37,6 @@ export class LibrosBuscarComponent implements OnInit {
       )
       .catch((error) => console.log(error));
 
-
     this.clave = '';
   }
 

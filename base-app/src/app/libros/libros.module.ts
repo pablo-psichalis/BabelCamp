@@ -8,6 +8,8 @@ import { LibrosMocComponent } from './libros-moc/libros-moc.component';
 import { FormsModule } from '@angular/forms';
 import { LibrosBuscarComponent } from './libros-buscar/libros-buscar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LibrosByServiceComponent } from './libros-by-service/libros-by-service.component';
+import { GoogleBooksService } from '../servicios/google-books.service';
 
 @NgModule({
   imports: [
@@ -20,7 +22,10 @@ import { HttpClientModule } from '@angular/common/http';
     LibrosComponent,
     LibrosBuscarComponent
   ],
-  declarations: [LibrosComponent, LibrosMocComponent, LibrosBuscarComponent],
-  providers: [BooksService]
+  declarations: [LibrosComponent, LibrosMocComponent, LibrosBuscarComponent, LibrosByServiceComponent],
+  providers: [
+    BooksService,
+    GoogleBooksService
+  ]
 })
 export class LibrosModule { }

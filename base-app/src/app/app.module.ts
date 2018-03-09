@@ -15,7 +15,7 @@ import { TruncarPipe } from './pipes/truncar.pipe';
 @NgModule({
   declarations: [
     AppComponent,
-    TruncarPipe,
+    TruncarPipe
   ],
   imports: [
     BrowserModule,

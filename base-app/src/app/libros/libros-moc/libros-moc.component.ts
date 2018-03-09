@@ -22,4 +22,9 @@ export class LibrosMocComponent implements OnInit {
     this.clave = '';
   }
 
+  buscarAsync() {
+    this.booksService.getLibrosAsync(this.clave)
+      .then((response: any) => this.aLibros = response);
+  }
+
 }

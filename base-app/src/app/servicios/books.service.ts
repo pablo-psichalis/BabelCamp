@@ -11,12 +11,20 @@ export class BooksService {
       'AppleWatch dev con Dr Leori',
       'Hangular para catedráticos',
       'FrenteEnd avanzadísimo con Don Alopecio Cálvez',
-      'Goris avanzados con Maese Cocaín'
+      'Doors ninja con Maese Cocaín'
     ];
   }
 
   getLibros(clave: string) {
     return this.aLibros;
+  }
+
+  getLibrosAsync(clave: string) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(this.aLibros);
+      }, 4000);
+    });
   }
 
 }

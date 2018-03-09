@@ -7,7 +7,9 @@
       <label for="clave">Clave de búsqueda</label>
       <input type="text" name="clave" id="clave" class="form-control" [(ngModel)]="clave">
     </div>
-    <button type="button" name="borjita" id="" class="btn btn-primary" role="button" (click)="buscar()">Buscar</button>
+    <button type="button" name="borjita" class="btn btn-primary" role="button" (click)="buscar()">Buscar</button>
+    <button type="button" name="borjitasync" class="btn btn-primary" role="button" (click)="buscarAsync()">Buscar Async</button>
+
   </div>
   <div class="card-footer text-muted">
     <p class="card-text"> Resultado </p>

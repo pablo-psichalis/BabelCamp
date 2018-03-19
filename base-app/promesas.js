@@ -55,3 +55,13 @@ Promise.all(promesas)
 // Ejemplo ed Promise.map (utilizando la librería bluebird)
 P.map(promesas, (result) => result * 20)
     .then(console.log);
+
+
+const array2 = [[2, 3], [4, 5]];
+console.log(P.map(array2, map));
+function map(result) {
+    return suma(result[0], result[1])
+        .then((result) => {
+            return result;
+        });
+}

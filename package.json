@@ -1,0 +1,22 @@
+{
+  "name": "nodebabel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pablo-psichalis/NodeBabel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pablo-psichalis/NodeBabel/issues"
+  },
+  "homepage": "https://github.com/pablo-psichalis/NodeBabel#readme",
+  "dependencies": {
+    "moment": "^2.21.0"
+  }
+}

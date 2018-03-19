@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/pablo-psichalis/NodeBabel#readme",
   "dependencies": {
+    "bluebird": "^3.5.1",
     "moment": "^2.21.0"
   }
 }

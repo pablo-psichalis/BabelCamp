@@ -11,14 +11,6 @@ function suma(a, b) {
     });
 }
 
-// version con callbacks
-function sumaCallback(callback, a, b) {
-    setTimeout(() => {
-        callback(a + b);
-    })
-}
-
-
 // ejecucion con promesas
 suma(2, 3)
     .then((resultado) => {
@@ -28,6 +20,13 @@ suma(2, 3)
         console.error(`Error: ${err}`)
     })
 
+
+// version con callbacks
+function sumaCallback(callback, a, b) {
+    setTimeout(() => {
+        callback(a + b);
+    })
+}
 
 // ejecucion con callbacks
 sumaCallback(console.log, 6, 4);

@@ -35,4 +35,5 @@ function getListFolders() {
     return fs_readFolder(FOLDER_PATH);
 }
 
-getPackagesJson(FOLDER_PATH);
+getPackagesJson().then(console.log);
+module.exports = getPackagesJson;

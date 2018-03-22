@@ -11,13 +11,11 @@ function getPackageJson(nameFolder) {
     return fs_readfile(file, 'utf-8')
         .then(convertStringToJson)
         .then(parserData)
+        .catch(() => null);
 }
 
 // para limpiar el código de las promises, encapsular
 // el contenido de los then en funciones privadas
-
-getPackageJson();
-
 
 function convertStringToJson(data) {
     return JSON.parse(data);
@@ -25,7 +23,7 @@ function convertStringToJson(data) {
 
 function parserData(data) {
     return {
-        name: data.name,
+        name: _.get(data, 'name'),
         description: data.description,
         version: data.version,
         license: data.license,

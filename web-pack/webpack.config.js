@@ -2,7 +2,7 @@ const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const extractSass = new ExtractTextPlugin({
-    filename: "style.css",
+    filename: "./dist/style.css",
     //disable: process.env.NODE_ENV === "development"
 });
 
@@ -10,27 +10,35 @@ const extractSass = new ExtractTextPlugin({
 module.exports = {
     entry: './app.js',
     output: {
-		path: path.resolve(__dirname, 'dist'),
-		filename: 'bundle.js'
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'bundle.js'
     },
-    module:{
-        rules:[
-                {
-                    test:/\.(s*)css$/,
-                    use: extractSass.extract({
-                      use: [
-                        {loader: "css-loader"},
-                        {loader: "sass-loader"}
-                      ],
-                      // use style-loader in development
-                      fallback: "style-loader"
-                    })
-                 }
-         ]
-      },
-      plugins : [
+    module: {
+        rules: [
+            {
+                test: /\.(s*)css$/,
+                use: extractSass.extract({
+                    use: [
+                        { loader: "css-loader" },
+                        { loader: "sass-loader" }
+                    ],
+                    // use style-loader in development
+                    fallback: "style-loader"
+                })
+            }
+        ]
+    },
+    plugins: [
         extractSass
-      ],
-  mode: 'development'
-  // mode: 'production'
-  };
+    ],
+    mode: 'development',
+    // mode: 'production'
+
+    devServer: {
+        host: '0.0.0.0',
+        port: 8085,
+        inline: true,
+        contentBase: path.join(__dirname, "dist"),
+    }
+};
+

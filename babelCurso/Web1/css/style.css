@@ -1,0 +1,67 @@
+@import "../../node_modules/font-awesome/css/font-awesome.min.css";
+
+:root {
+    color-principal: d;
+}
+
+h1 {
+    font-size: 2rem;
+    color: maroon;
+}
+
+header h1 {
+    font-size: 2rem;
+} /*Esoecificidad: 0 0 0 2*/
+
+
+header p { /* Aplicar solo a los parrafos que estan dentro de un header */
+    color: greenyellow;
+}
+
+#p1 {
+     color: lightsalmon;
+ }
+
+ /*En caso de hacer hover sobre los párrafos tales que
+ lang="en", aplicar el estilo al span correspondiente*/
+ p[lang="en"]:hover span {
+     color: firebrick;
+ }
+
+ p[lang="en"]::first-letter {
+     font-size: 4rem;
+     font-style: italic;
+     font-weight: bold;
+ }
+
+ 
+ul::before {
+    content: "Aqui empieza una lista";
+    color: fuchsia;
+}
+ 
+ ul::after{
+    content: "Aqui termina una lista";
+    color: fuchsia;
+ }
+
+ p:nth-child(2){
+     color: lightcoral;
+ }
+
+ body>p {
+     color: dodgerblue;
+ }
+
+ /*
+ .verde {
+     color: green;
+ }
+
+ .grande {
+     font-size: 1.4rem;
+ }
+
+ p {
+     color: hotpink;
+ } */

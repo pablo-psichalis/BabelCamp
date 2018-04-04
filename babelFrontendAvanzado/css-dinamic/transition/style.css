@@ -1,0 +1,42 @@
+h1 {
+    color: rgb(100, 252, 13);
+    background-color: rgba(0, 0, 0, 0.808);
+    font-size: 2rem;
+    text-align: center;
+    border-color: papayawhip;
+    border: 1px;
+    border-radius: 6rem;
+    padding: 1rem;
+    min-height: 3rem;
+    transition-property: font-size;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0, 3.27, 1, 1.07);
+}
+
+h1:hover {
+    background-color: rgb(100, 252, 13);
+    color: rgba(0, 0, 0, 0.808);
+    font-size: 3rem;
+    border-radius: 200rem;
+    min-height: 4rem;
+    padding: 2rem;
+}
+
+main img {
+    width: 300px;
+    height: auto;
+    transition-property: transform;
+    transition-duration: 10s;
+}
+
+img:hover {
+    opacity: 10;
+    transform: rotate(+3600deg);
+}
+
+main div {
+    margin: 2rem;
+    padding: 2rem;
+    border: 1px solid;
+    width: 50%;
+}

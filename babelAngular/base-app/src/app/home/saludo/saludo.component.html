@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-header">
+    <h4 class="card-title">Binding</h4>
+  </div>
+  <div class="card-body">
+    <div class="form-group">
+      <label for="nombre">Introduzca el nombre</label>
+      <input type="text" name="nombre" id="nombre" class="form-control" aria-describedby="helpId" [(ngModel)]="sNombre">
+      <small id="helpId" class="text-muted">Se actualizará automáticamente</small>
+    </div>
+    <button type="button" name="" id="" class="btn btn-primary" (click)="btnBorrar()">Borrar</button>
+
+  </div>
+  <div class="card-footer text-muted">
+    <p>OLA {{ sNombre.toUpperCase() }}!!1!</p>
+    <p>2765 + 2765 = {{ 2765*2765 }}</p>
+    <pre>{{ user | json }}</pre>
+  </div>
+</div>
+
+<!-- 
+   {{expresion}}
+   []   operador de propiedades
+   [()] operador de doble binding o "banana in a box"
+   #    operador de expresiones locales
+ -->

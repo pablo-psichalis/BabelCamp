@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card-header">
+    <h4 class="card-title">Padre</h4>
+  </div>
+  <div class="card-body">
+    <div class="form-group">
+      <!--      <label for="nombre">Introduzca el nombre</label> -->
+      <input type="text" name="nombre" id="nombre" class="form-control" aria-describedby="helpId" [(ngModel)]="sNombre">
+      <!--      <small id="helpId" class="text-muted">Se actualizará automáticamente</small>
+    </div> 
+    <button type="button" name="" id="" class="btn btn-primary" (click)="btnBorrar()">Borrar</button>
+-->
+    </div>
+    <bbl-hijo [nombreHijo]="sNombre" (respuesta)="respuestaHijo($event)" ></bbl-hijo>
+    <div class="card-footer text-muted">
+      <p>Mi hijo se llama {{ sNombre }}</p>
+    </div>
+  </div>
+

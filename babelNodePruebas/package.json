@@ -1,0 +1,26 @@
+{
+  "name": "nodebabel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pablo-psichalis/NodeBabel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pablo-psichalis/NodeBabel/issues"
+  },
+  "homepage": "https://github.com/pablo-psichalis/NodeBabel#readme",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "express": "^4.16.3",
+    "lodash": "^4.17.5",
+    "moment": "^2.21.0",
+    "request": "^2.85.0"
+  }
+}

@@ -1,0 +1,13 @@
+canvas {
+    border: 1px solid;
+    color: rgba(220, 220, 220, 0.61);
+}
+
+h1 {
+    color: gainsboro;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: rgba(19, 18, 18, 0.822);
+}

@@ -12,8 +12,8 @@ class App extends Component {
     super(props);
 
     this.state = {
-      username: 'Jajejuji',
-      surname: 'Jejez',
+      username: 'Usercito',
+      surname: 'Sanchez',
       age: 23,
     }
   }
@@ -23,14 +23,20 @@ class App extends Component {
     this.setState({ [key]: value });
   }
 
+  isOld = () => {
+    const { age } = this.state
+    return age > 28;
+  }
+
   render() {
     const { username, surname, age } = this.state;
-    const message = `Hi ${username}! Surname: ${surname}, Age: ${age}`;
-    
+    const message = `Hi ${username}! Age: ${age}, Surname: ${surname}`;
+
     return (
       <div className="App">
         <Header logo={logo} />
         <Intro message={message} />
+        {this.isOld() && <p>Eres un viejales!</p>}
         <WonderForm
           onInputChange={this.onInputChange}
         />
